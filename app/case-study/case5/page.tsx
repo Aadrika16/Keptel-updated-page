@@ -2,14 +2,26 @@
 
 import Footer from "@/components/Footer";
 import SlideUp from "@/components/SlideUp";
+import { 
+  AlertTriangle, 
+  Lightbulb, 
+  Target, 
+  Wrench, 
+  Users, 
+  CheckCircle2, 
+  Rocket, 
+  UserCheck, 
+  TrendingUp, 
+  Zap,
+  Activity
+} from "lucide-react";
 
 export default function CaseStudyPage() {
   const title = "Healthcare Technology";
   const bg = "/case/health.jpeg";
 
   return (
-    <div>
-
+    <div className="min-h-screen flex flex-col bg-[#E7EEF3]">
       {/* HERO */}
       <div className="relative w-full h-[350px] md:h-[450px] lg:h-[500px]">
         <img
@@ -32,109 +44,190 @@ export default function CaseStudyPage() {
       </div>
 
       {/* MAIN SECTION */}
-      <div className="min-h-screen bg-[#E7EEF3] text-black pt-20 pb-32">
-        <div className="max-w-5xl mx-auto px-6">
+      <main className="flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="space-y-6">
 
-          {/* Domain */}
+          {/* Top Section: Title & Description alongside Problem Statement */}
+          <div className="grid lg:grid-cols-12 gap-6 items-center">
+            
+            {/* Left: Domain & Description */}
+            <div className="lg:col-span-6 space-y-3">
+              <SlideUp>
+                <h1 className="text-3xl md:text-4xl font-normal tracking-tight text-slate-900 leading-tight">
+                  Clinical Data & Health Analytics
+                </h1>
+              </SlideUp>
+
+              <SlideUp>
+                <p className="text-slate-600 font-light leading-relaxed text-sm md:text-base">
+                  An overview of how Keptel strengthened a healthcare company's
+                  engineering capabilities across clinical data integration,
+                  analytics-driven workflows, and compliance-focused architectures.
+                </p>
+              </SlideUp>
+            </div>
+
+            {/* Right: Problem Statement Card */}
+            <div className="lg:col-span-6">
+              <SlideUp>
+                <div className="p-6 md:p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl text-white">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-500 shrink-0">
+                      <AlertTriangle className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-medium text-red-500 mb-2">
+                        Problem Statement
+                      </h2>
+                      <p className="text-gray-300 text-xs md:text-sm leading-relaxed font-light">
+                        The healthcare company needed specialists in clinical data
+                        engineering, patient-data interoperability, analytics pipelines,
+                        and regulatory-compliant architectures. Recruiting engineers
+                        with deep knowledge of healthcare data standards and secure data
+                        integration frameworks proved difficult.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </SlideUp>
+            </div>
+          </div>
+
+          {/* Approach & Solution */}
           <SlideUp>
-            <h1 className="text-4xl font-extralight mb-4">
-              Clinical Data & Health Analytics
-            </h1>
-          </SlideUp>
+            <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-start gap-5 max-w-2xl">
+                <div className="p-3.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 shrink-0 flex items-center justify-center w-14 h-14">
+                  <Lightbulb className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-medium text-slate-900 mb-2">
+                    Keptel's Approach & Solution
+                  </h3>
+                  <p className="text-slate-600 text-xs md:text-sm font-light leading-relaxed">
+                    Keptel deployed engineers skilled in HL7, FHIR, HIPAA-compliant
+                    architecture, and healthcare ETL. The team built unified
+                    clinical data pipelines, improved interoperability between
+                    systems, and strengthened compliance and reporting accuracy.
+                  </p>
+                </div>
+              </div>
 
-          <SlideUp>
-            <p className="text-black font-light leading-relaxed max-w-3xl">
-              An overview of how Keptel strengthened a healthcare company's
-              engineering capabilities across clinical data integration,
-              analytics-driven workflows, and compliance-focused architectures.
-            </p>
-          </SlideUp>
-
-          {/* Feature Block 1 — Gradient */}
-          <SlideUp>
-            <div className="mt-12 p-6 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl">
-              <h2 className="text-2xl text-red-500 font-extralight mb-4">
-                Problem Statement
-              </h2>
-
-              <p className="text-gray-300 text-sm font-light leading-relaxed">
-                The healthcare company needed specialists in clinical data
-                engineering, patient-data interoperability, analytics pipelines,
-                and regulatory-compliant architectures. Recruiting engineers
-                with deep knowledge of healthcare data standards and secure data
-                integration frameworks proved difficult.
-              </p>
+              <div className="shrink-0 bg-slate-50 border border-slate-100 p-4 rounded-2xl flex items-center gap-3 w-full md:w-auto justify-center">
+                <div className="p-2.5 bg-blue-600 text-white rounded-xl shadow-inner">
+                  <Activity className="w-5 h-5" />
+                </div>
+                <div className="text-xs text-slate-500 font-medium space-y-0.5">
+                  <div className="text-slate-900 font-semibold">Health Standards</div>
+                  <div>HL7 • FHIR • HIPAA</div>
+                </div>
+              </div>
             </div>
           </SlideUp>
 
-          {/* Feature Block 2 — White Card */}
+          {/* Business Outcomes */}
           <SlideUp>
-            <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-              <h3 className="text-xl font-extralight mb-3">
-                Keptel's Approach & Solution
-              </h3>
+            <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm">
+              <div className="flex items-start gap-5 mb-6">
+                <div className="p-3.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 shrink-0 flex items-center justify-center w-14 h-14">
+                  <Target className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-medium text-slate-900 mb-2">
+                    Business Outcomes
+                  </h3>
+                  <p className="text-slate-600 text-xs md:text-sm font-light leading-relaxed">
+                    The engagement improved data quality, enhanced regulatory
+                    alignment, enabled faster analytics turnaround, and strengthened
+                    patient-data interoperability across clinical workflows.
+                  </p>
+                </div>
+              </div>
 
-              <p className="text-gray-700 text-sm font-light leading-relaxed">
-                Keptel deployed engineers skilled in HL7, FHIR, HIPAA-compliant
-                architecture, and healthcare ETL. The team built unified
-                clinical data pipelines, improved interoperability between
-                systems, and strengthened compliance and reporting accuracy.
-                These enhancements enabled more reliable analytics and
-                streamlined patient-data workflows.
-              </p>
-            </div>
-          </SlideUp>
-
-          {/* Feature Block 3 — White Card */}
-          <SlideUp>
-            <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-              <h3 className="text-xl font-extralight mb-3">
-                Business Outcomes
-              </h3>
-
-              <p className="text-gray-700 text-sm font-light leading-relaxed">
-                The engagement improved data quality, enhanced regulatory
-                alignment, enabled faster analytics turnaround, and strengthened
-                patient-data interoperability. Reporting accuracy and
-                operational visibility improved significantly across healthcare
-                workflows.
-              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-100">
+                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 text-center flex flex-col items-center justify-center">
+                  <Rocket className="w-5 h-5 text-emerald-600 mb-2" />
+                  <span className="text-xs font-medium text-slate-800">Improved Data Quality</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 text-center flex flex-col items-center justify-center">
+                  <UserCheck className="w-5 h-5 text-emerald-600 mb-2" />
+                  <span className="text-xs font-medium text-slate-800">Enhanced Alignment</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 text-center flex flex-col items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-emerald-600 mb-2" />
+                  <span className="text-xs font-medium text-slate-800">Faster Analytics</span>
+                </div>
+                <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 text-center flex flex-col items-center justify-center">
+                  <Zap className="w-5 h-5 text-emerald-600 mb-2" />
+                  <span className="text-xs font-medium text-slate-800">Better Interoperability</span>
+                </div>
+              </div>
             </div>
           </SlideUp>
 
           {/* Use Cases Grid */}
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
-
+          <div className="grid md:grid-cols-2 gap-6">
             <SlideUp>
-              <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-                <h4 className="font-extralight mb-2">
-                  Key Engineering Contributions
-                </h4>
-                <ul className="text-sm font-light text-gray-700 space-y-2">
-                  <li>• Healthcare ETL & analytics engineering</li>
-                  <li>• HL7 & FHIR interoperability solutions</li>
-                  <li>• Secure patient-data integration</li>
-                  <li>• HIPAA-compliant architecture design</li>
-                  <li>• Clinical data transformation workflows</li>
+              <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm h-full flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3.5 rounded-full bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center w-14 h-14 shrink-0">
+                    <Wrench className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-medium text-slate-900 text-base md:text-lg">Key Engineering Contributions</h4>
+                </div>
+                <ul className="text-xs md:text-sm font-light text-slate-600 space-y-4 my-auto">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <span>Healthcare ETL & analytics engineering</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <span>HL7 & FHIR interoperability solutions</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <span>Secure patient-data integration</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <span>HIPAA-compliant architecture design</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                    <span>Clinical data transformation workflows</span>
+                  </li>
                 </ul>
               </div>
             </SlideUp>
 
             <SlideUp>
-              <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-                <h4 className="font-extralight mb-2">Ideal For</h4>
-                <ul className="text-sm font-light text-gray-700 space-y-2">
-                  <li>• Healthcare providers & hospital networks</li>
-                  <li>• Health-tech product companies</li>
-                  <li>• Organizations requiring secure clinical analytics</li>
+              <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm h-full flex flex-col">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3.5 rounded-full bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center w-14 h-14 shrink-0">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-medium text-slate-900 text-base md:text-lg">Ideal For</h4>
+                </div>
+                <ul className="text-xs md:text-sm font-light text-slate-600 space-y-5 my-auto">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Healthcare providers & hospital networks</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Health-tech product companies</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                    <span>Organizations requiring secure clinical analytics</span>
+                  </li>
                 </ul>
               </div>
             </SlideUp>
-
           </div>
 
         </div>
-      </div>
+      </main>
 
       <Footer />
     </div>
