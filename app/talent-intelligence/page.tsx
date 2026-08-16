@@ -66,33 +66,56 @@ export default function Page() {
       {/* Hero */}
       <FullHero title={title} bg={bg} />
 
-      {/* Intro Section */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        
-        {/* LEFT TEXT */}
-        <div>
-          <SlideUp>
-            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
-              {introLeft}
-            </p>
-          </SlideUp>
+      {/* OVERVIEW SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Overview
+          </p>
+        </SlideUp>
 
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          {/* LEFT COLUMN */}
           <SlideUp>
-            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+            <h2 className="text-3xl font-light leading-snug text-gray-800">
+              {introLeft}
+            </h2>
+            <p className="mt-6 text-gray-600 leading-relaxed font-light text-justify text-sm">
               {bottomText}
             </p>
           </SlideUp>
-        </div>
 
-        {/* RIGHT PARAGRAPH */}
+          {/* RIGHT COLUMN */}
+          <SlideUp>
+            <div className="border-l-4 border-red-600 pl-6">
+              <p className="text-gray-700 leading-relaxed font-light text-justify text-sm">
+                {introRight}
+              </p>
+            </div>
+          </SlideUp>
+        </div>
+      </div>
+
+      {/* SERVICES HEADING */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
         <SlideUp>
-          <p className="text-gray-700 font-light leading-relaxed text-left text-justify whitespace-pre-line">
-            {introRight}
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Our Services
           </p>
+        </SlideUp>
+
+        <SlideUp>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            Services
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
         </SlideUp>
       </div>
 
-      {/* Tabs */}
+      {/* TABS */}
       <ServiceTabs
         tabs={tabs}
         onSelect={(id: string) =>
@@ -100,7 +123,7 @@ export default function Page() {
         }
       />
 
-      {/* Active Section */}
+      {/* SERVICE CONTENT */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}
@@ -108,20 +131,33 @@ export default function Page() {
         text={sections[currentTab].text}
       />
 
-      {/* Final Diagram */}
-      <div className="py-16 text-center">
-        <SlideUp>
-          <h2 className="text-3xl font-extralight">
-            Talent Intelligence Process Flow
-          </h2>
-        </SlideUp>
+      {/* PROCESS SECTION */}
+      <div className="py-20" style={{ backgroundColor: "#e6edf4" }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <SlideUp>
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+              Process
+            </p>
+          </SlideUp>
 
-        <SlideUp>
-          <img
-            src="/intelligence/a4.webp"
-            className="w-[980px] mx-auto mt-4"
-          />
-        </SlideUp>
+          <SlideUp>
+            <h3 className="text-3xl font-light leading-snug text-gray-800 mt-3">
+              Talent Intelligence Process Flow
+            </h3>
+          </SlideUp>
+
+          <SlideUp>
+            <div className="w-16 h-1 bg-red-600 mt-4"></div>
+          </SlideUp>
+
+          <SlideUp>
+            <img
+              src="/intelligence/a4.webp"
+              className="w-full mt-8"
+              alt="Talent Intelligence Process Flow"
+            />
+          </SlideUp>
+        </div>
       </div>
 
       <Footer />
