@@ -23,8 +23,16 @@ export default function Page() {
 
   // 2) TABS
   const tabs = [
-    { id: "fulltime", label: "Executive Search", icon: "/icon/shield.svg" },
-    { id: "flexi", label: "CXO Mapping", icon: "/icon/laptop.svg" },
+    {
+      id: "fulltime",
+      label: "Executive Search",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "flexi",
+      label: "CXO Mapping",
+      icon: "/icon/laptop.svg",
+    },
     {
       id: "strategic",
       label: "Director/ Board Member Hiring",
@@ -33,19 +41,24 @@ export default function Page() {
   ];
 
   // 3) TAB CONTENT
-  const sections: Record<string, { title: string; image: string; text: string }> = {
+  const sections: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     fulltime: {
       title: "Executive Search",
       image: "/executive/e1f.jpeg",
       text:
         "Keptel partners closely with Founders, CXOs, and Leadership Teams to understand organisational vision, strategic goals, and role expectations. Our structured leadership assessment framework—covering Role Mapping, Competency Scoring, and Behavioural Evaluation—enables us to identify executives who bring strategic clarity, innovation, and execution excellence. We ensure organisations gain leaders who not only fit the position but elevate long-term business performance.",
     },
+
     flexi: {
       title: "CXO Mapping",
       image: "/executive/e2f.jpeg",
       text:
         "We support organisations in evaluating, benchmarking, and restructuring their leadership through comprehensive CXO Mapping. Our approach assesses experience depth, competency maturity, decision-making style, and transformation readiness for CXO-level roles. This enables companies to build strong leadership pipelines, restructure existing hierarchies, and identify future-ready executives capable of driving business expansion and operational excellence.",
     },
+
     strategic: {
       title: "Director/ Board Member Hiring",
       image: "/executive/e3.webp",
@@ -63,29 +76,55 @@ export default function Page() {
       {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* INTRO SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        
-        {/* LEFT TEXT */}
-        <div>
-          <SlideUp>
-            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
-              {introLeft}
-            </p>
-          </SlideUp>
+      {/* OVERVIEW SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        {/* SECTION LABEL */}
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Overview
+          </p>
+        </SlideUp>
 
+        {/* TWO COLUMN OVERVIEW */}
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          {/* LEFT COLUMN */}
           <SlideUp>
-            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+            <h2 className="text-3xl font-light leading-snug text-gray-800">
+              {introLeft}
+            </h2>
+
+            <p className="mt-6 text-gray-600 leading-relaxed font-light text-justify text-sm">
               {bottomText}
             </p>
           </SlideUp>
-        </div>
 
-        {/* RIGHT TEXT */}
+          {/* RIGHT COLUMN */}
+          <SlideUp>
+            <div className="border-l-4 border-red-600 pl-6">
+              <p className="text-gray-700 leading-relaxed font-light text-justify text-sm">
+                {introRight}
+              </p>
+            </div>
+          </SlideUp>
+        </div>
+      </div>
+
+      {/* SERVICES HEADING */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
         <SlideUp>
-          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
-            {introRight}
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Our Services
           </p>
+        </SlideUp>
+
+        <SlideUp>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            Services
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
         </SlideUp>
       </div>
 
@@ -97,7 +136,7 @@ export default function Page() {
         }
       />
 
-      {/* ACTIVE SECTION */}
+      {/* ACTIVE SERVICE SECTION */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}
@@ -105,6 +144,7 @@ export default function Page() {
         text={sections[currentTab].text}
       />
 
+      {/* FOOTER */}
       <Footer />
     </div>
   );
