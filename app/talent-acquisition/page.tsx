@@ -7,6 +7,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 import SlideUp from "@/components/SlideUp";
 
+
 export default function Page() {
   // 1) PAGE DATA
   const title = "Talent Acquisition";
