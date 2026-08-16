@@ -22,20 +22,21 @@ export default function ServiceTabs({ tabs, onSelect }: Props) {
   };
 
   return (
-   <div className="flex flex-wrap md:flex-nowrap justify-center gap-6 md:gap-14 py-10 text-[#0e355d]">
-  {tabs.map((t) => (
-    <button
-      key={t.id}
-      onClick={() => handle(t.id)}
-      className={`flex items-center gap-2 text-base md:text-lg font-light transition ${
-        active === t.id ? "font-medium opacity-100" : "opacity-50"
-      }`}
-    >
-      <img src={t.icon} className="w-5 md:w-6" />
-      {t.label}
-    </button>
-  ))}
-</div>
-
+    <div className="flex flex-wrap md:flex-nowrap justify-center gap-6 md:gap-14 py-10 text-[#0e355d]">
+      {tabs.map((t) => (
+        <button
+          key={t.id}
+          onClick={() => handle(t.id)}
+          className={`flex items-center gap-2 text-base md:text-lg font-light transition pb-2 ${
+            active === t.id
+              ? "font-medium opacity-100 border-b-2 border-red-600"
+              : "opacity-50"
+          }`}
+        >
+          <img src={t.icon} className="w-5 md:w-6" />
+          {t.label}
+        </button>
+      ))}
+    </div>
   );
 }
