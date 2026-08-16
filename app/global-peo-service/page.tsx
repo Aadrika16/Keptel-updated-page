@@ -23,24 +23,41 @@ export default function Page() {
 
   // TAB SET 1
   const tabs1 = [
-    { id: "fulltime", label: "Hiring, Benefits & Payroll", icon: "/icon/shield.svg" },
-    { id: "flexi", label: "Legal & Financial Guidance", icon: "/icon/laptop.svg" },
-    { id: "strategic", label: "Human Resources", icon: "/icon/server.svg" },
+    {
+      id: "fulltime",
+      label: "Hiring, Benefits & Payroll",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "flexi",
+      label: "Legal & Financial Guidance",
+      icon: "/icon/laptop.svg",
+    },
+    {
+      id: "strategic",
+      label: "Human Resources",
+      icon: "/icon/server.svg",
+    },
   ];
 
-  const sections1: Record<string, { title: string; image: string; text: string }> = {
+  const sections1: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     fulltime: {
       title: "Hiring, Benefits & Payroll",
       image: "/global/g3.webp",
       text:
         "We manage complete hiring, compensation planning, and payroll administration aligned with local regulations and global best practices. Our compliant payroll systems, structured benefits programs, and transparent processes ensure accuracy, timeliness, and seamless employee experiences—enabling organisations to focus entirely on business growth while we handle end-to-end workforce operations.",
     },
+
     flexi: {
       title: "Legal & Financial Guidance",
       image: "/global/g4.webp",
       text:
         "We deliver comprehensive legal and financial governance for all in-country operations. Our specialised compliance teams monitor labour laws, taxation updates, and regulatory changes to ensure full adherence to local requirements. This enables organisations to operate globally without legal exposure, administrative burden, or compliance-related risks.",
     },
+
     strategic: {
       title: "Human Resources",
       image: "/global/g5.webp",
@@ -49,30 +66,47 @@ export default function Page() {
     },
   };
 
-  const [currentTab1, setCurrentTab1] = useState<"fulltime" | "flexi" | "strategic">(
-    "fulltime"
-  );
+  const [currentTab1, setCurrentTab1] = useState<
+    "fulltime" | "flexi" | "strategic"
+  >("fulltime");
 
   // TAB SET 2
   const tabs2 = [
-    { id: "alpha", label: "International Expansion", icon: "/icon/shield.svg" },
-    { id: "beta", label: "International Recruitment", icon: "/icon/laptop.svg" },
-    { id: "gamma", label: "EOR", icon: "/icon/server.svg" },
+    {
+      id: "alpha",
+      label: "International Expansion",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "beta",
+      label: "International Recruitment",
+      icon: "/icon/laptop.svg",
+    },
+    {
+      id: "gamma",
+      label: "EOR",
+      icon: "/icon/server.svg",
+    },
   ];
 
-  const sections2: Record<string, { title: string; image: string; text: string }> = {
+  const sections2: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     alpha: {
       title: "International Expansion",
       image: "/global/g6.webp",
       text:
         "We support organisations as they transition from PEO-led operations to establishing their own legal entities. While clients scale internationally, Keptel continues to manage HR, payroll, compliance, taxation, and operational frameworks—enabling a smooth and compliant expansion journey.",
     },
+
     beta: {
       title: "International Recruitment",
       image: "/global/g7.webp",
       text:
         "Build global teams without navigating complex international hiring constraints. Keptel manages recruitment, onboarding, local compliance, and employee administration across geographies—allowing organisations to deploy talent anywhere, quickly and efficiently.",
     },
+
     gamma: {
       title: "EOR",
       image: "/global/g8.webp",
@@ -81,42 +115,68 @@ export default function Page() {
     },
   };
 
-  const [currentTab2, setCurrentTab2] = useState<"alpha" | "beta" | "gamma">(
-    "alpha"
-  );
-
-  // --------------------------------------------------------------------
+  const [currentTab2, setCurrentTab2] = useState<
+    "alpha" | "beta" | "gamma"
+  >("alpha");
 
   return (
     <div>
       {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* INTRO SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        
-        <div>
-          <SlideUp>
-            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
-              {introLeft}
-            </p>
-          </SlideUp>
+      {/* OVERVIEW SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        {/* SECTION LABEL */}
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Overview
+          </p>
+        </SlideUp>
 
+        {/* TWO COLUMN OVERVIEW */}
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          {/* LEFT COLUMN */}
           <SlideUp>
-            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+            <h2 className="text-3xl font-light leading-snug text-gray-800">
+              {introLeft}
+            </h2>
+
+            <p className="mt-6 text-gray-600 leading-relaxed font-light text-justify text-sm">
               {bottomText}
             </p>
           </SlideUp>
+
+          {/* RIGHT COLUMN */}
+          <SlideUp>
+            <div className="border-l-4 border-red-600 pl-6">
+              <p className="text-gray-700 leading-relaxed font-light text-justify text-sm">
+                {introRight}
+              </p>
+            </div>
+          </SlideUp>
         </div>
+      </div>
+
+      {/* SERVICES SECTION 1 */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Our Services
+          </p>
+        </SlideUp>
 
         <SlideUp>
-          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
-            {introRight}
-          </p>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            Global Workforce Management
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
         </SlideUp>
       </div>
 
-      {/* TAB SET 1 */}
+      {/* TABS 1 */}
       <ServiceTabs
         tabs={tabs1}
         onSelect={(id: string) =>
@@ -124,6 +184,7 @@ export default function Page() {
         }
       />
 
+      {/* SERVICE CONTENT 1 */}
       <ServiceSection
         index={0}
         title={sections1[currentTab1].title}
@@ -131,14 +192,34 @@ export default function Page() {
         text={sections1[currentTab1].text}
       />
 
-      {/* TAB SET 2 */}
-      <div className="mt-20" />
+      {/* SERVICES SECTION 2 */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Global Expansion
+          </p>
+        </SlideUp>
 
+        <SlideUp>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            International Workforce Solutions
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
+        </SlideUp>
+      </div>
+
+      {/* TABS 2 */}
       <ServiceTabs
         tabs={tabs2}
-        onSelect={(id: string) => setCurrentTab2(id as "alpha" | "beta" | "gamma")}
+        onSelect={(id: string) =>
+          setCurrentTab2(id as "alpha" | "beta" | "gamma")
+        }
       />
 
+      {/* SERVICE CONTENT 2 */}
       <ServiceSection
         index={1}
         title={sections2[currentTab2].title}
@@ -146,6 +227,7 @@ export default function Page() {
         text={sections2[currentTab2].text}
       />
 
+      {/* FOOTER */}
       <Footer />
     </div>
   );
