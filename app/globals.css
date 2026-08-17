@@ -33,13 +33,19 @@ body {
 
 /* SCROLL ANIMATION */
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .slide-bg {
   position: relative;
 }
+
 .slide-bg::before {
   content: "";
   position: absolute;
@@ -122,13 +128,16 @@ body {
     transform: translateY(0);
   }
 }
+
 /* GLOBAL SEAM FIX */
-html, body {
+html,
+body {
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -168,6 +177,7 @@ section {
     transform: translateX(400px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;

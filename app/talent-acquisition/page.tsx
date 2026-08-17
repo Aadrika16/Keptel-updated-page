@@ -7,6 +7,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 import SlideUp from "@/components/SlideUp";
 
+
 export default function Page() {
   // 1) PAGE DATA
   const title = "Talent Acquisition";
@@ -23,8 +24,16 @@ export default function Page() {
 
   // 2) TABS
   const tabs = [
-    { id: "fulltime", label: "Full-Time Staffing", icon: "/icon/shield.svg" },
-    { id: "flexi", label: "Flexi Staffing", icon: "/icon/laptop.svg" },
+    {
+      id: "fulltime",
+      label: "Full-Time Staffing",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "flexi",
+      label: "Flexi Staffing",
+      icon: "/icon/laptop.svg",
+    },
     {
       id: "strategic",
       label: "Strategic or Critical Hiring",
@@ -43,12 +52,14 @@ export default function Page() {
       text:
         "Building a strong organisation begins with securing high-calibre, domain-ready professionals who contribute meaningfully from day one. Keptel bridges the gap between employers and top-tier talent through our dedicated full-time staffing model. Our consultants work round the clock to source, evaluate, and deliver candidates who match the technical, behavioural, and cultural expectations of your business. The result is a reliable, scalable, and quality-driven hiring process aligned with long-term workforce planning.",
     },
+
     flexi: {
       title: "Flexi Staffing",
       image: "/talent/t2.webp",
       text:
         "Our Flexi Staffing model empowers organisations to stay agile during periods of rapid growth, seasonal fluctuations, or project-based requirements. Keptel provides skilled, on-demand professionals who support short-term assignments without compromising on efficiency or capability. This approach ensures talent availability, operational flexibility, and optimised workforce costs.",
     },
+
     strategic: {
       title: "Strategic or Critical Hiring",
       image: "/talent/t3.webp",
@@ -66,29 +77,55 @@ export default function Page() {
       {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* INTRO SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        
-        {/* LEFT TEXT */}
-        <div>
-          <SlideUp>
-            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
-              {introLeft}
-            </p>
-          </SlideUp>
+      {/* OVERVIEW SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        {/* SECTION LABEL */}
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Overview
+          </p>
+        </SlideUp>
 
+        {/* TWO COLUMN OVERVIEW */}
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          {/* LEFT COLUMN */}
           <SlideUp>
-            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+            <h2 className="text-3xl font-light leading-snug text-gray-800">
+              {introLeft}
+            </h2>
+
+            <p className="mt-6 text-gray-600 leading-relaxed font-light text-justify text-sm">
               {bottomText}
             </p>
           </SlideUp>
-        </div>
 
-        {/* RIGHT PARAGRAPH */}
+          {/* RIGHT COLUMN */}
+          <SlideUp>
+            <div className="border-l-4 border-red-600 pl-6">
+              <p className="text-gray-700 leading-relaxed font-light text-justify text-sm">
+                {introRight}
+              </p>
+            </div>
+          </SlideUp>
+        </div>
+      </div>
+
+      {/* SERVICES HEADING */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
         <SlideUp>
-          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
-            {introRight}
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Our Services
           </p>
+        </SlideUp>
+
+        <SlideUp>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            Services
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
         </SlideUp>
       </div>
 
@@ -100,7 +137,7 @@ export default function Page() {
         }
       />
 
-      {/* ACTIVE SECTION */}
+      {/* ACTIVE SERVICE SECTION */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}
@@ -108,6 +145,7 @@ export default function Page() {
         text={sections[currentTab].text}
       />
 
+      {/* FOOTER */}
       <Footer />
     </div>
   );

@@ -39,7 +39,10 @@ export default function Header() {
 
   const [activeCopy, setActiveCopy] = useState<"phone" | "email" | null>(null);
 
-  const selectText = (ref: React.RefObject<HTMLSpanElement>, key: "phone" | "email") => {
+  const selectText = (
+    ref: React.RefObject<HTMLSpanElement>,
+    key: "phone" | "email",
+  ) => {
     const el = ref.current;
     if (!el) return;
 
@@ -95,7 +98,7 @@ export default function Header() {
   const handleLeave = () => {
     closeTimeoutRef.current = setTimeout(() => setOpenMenu(null), 200);
   };
-const router = useRouter();
+  const router = useRouter();
   const pathname = usePathname();
 
   const handleLogoClick = () => {
@@ -114,10 +117,9 @@ const router = useRouter();
     // 3. If already at top → do nothing
   };
   const handleMobileNavigate = () => {
-  setOpenMenu(null);        // closes dropdowns
-  setMenuOpen(false);       // closes full mobile menu
-};
-
+    setOpenMenu(null); // closes dropdowns
+    setMenuOpen(false); // closes full mobile menu
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
@@ -145,7 +147,7 @@ const router = useRouter();
 
             {activeCopy === "phone" && (
               <button
-  className="
+                className="
     absolute top-0 left-0
     h-full
     w-[calc(100%+20px)]
@@ -153,11 +155,10 @@ const router = useRouter();
     flex items-center justify-center
     rounded z-20
   "
-  onClick={() => copyText("+918884344442")}
->
-  Copy
-</button>
-
+                onClick={() => copyText("+918884344442")}
+              >
+                Copy
+              </button>
             )}
           </div>
 
@@ -196,13 +197,18 @@ const router = useRouter();
       <nav className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <button onClick={handleLogoClick} className="flex items-center -ml-12">
+          <button
+            onClick={handleLogoClick}
+            className="flex items-center -ml-12"
+          >
             <img src="/logo.svg" alt="Logo" className="h-28 w-auto" />
           </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6 font-medium text-[#0e355d] text-sm">
-            <a href="/#whyus" className="hover:text-red-500">Why Us</a>
+            <a href="/#whyus" className="hover:text-red-500">
+              Why Us
+            </a>
 
             {/* TECH */}
             <div
@@ -223,9 +229,24 @@ const router = useRouter();
                   }
                 `}
               >
-                <a href="/data/data-modernization" className="block py-2 hover:text-red-500">Data Modernization</a>
-                <a href="/data/aritifical-intelligence" className="block py-2 hover:text-red-500">Artificial Intelligence</a>
-                <a href="/data/ai-powered-operations" className="block py-2 hover:text-red-500">AI Powered Operations</a>
+                <a
+                  href="/data/data-modernization"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Data Modernization
+                </a>
+                <a
+                  href="/data/aritifical-intelligence"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Artificial Intelligence
+                </a>
+                <a
+                  href="/data/ai-powered-operations"
+                  className="block py-2 hover:text-red-500"
+                >
+                  AI Powered Operations
+                </a>
               </div>
             </div>
 
@@ -248,12 +269,42 @@ const router = useRouter();
                   }
                 `}
               >
-                <a href="/case-study/case1" className="block py-2 hover:text-red-500">IT Services & Digital Engineering</a>
-                <a href="/case-study/case2" className="block py-2 hover:text-red-500">Automotive Engineering</a>
-                <a href="/case-study/case3" className="block py-2 hover:text-red-500">Aerospace & Defence</a>
-                <a href="/case-study/case4" className="block py-2 hover:text-red-500">Industrial Automation</a>
-                <a href="/case-study/case5" className="block py-2 hover:text-red-500">Healthcare Technology</a>
-                <a href="/case-study/case6" className="block py-2 hover:text-red-500">IoT & Embedded Systems</a>
+                <a
+                  href="/case-study/case1"
+                  className="block py-2 hover:text-red-500"
+                >
+                  IT Services & Digital Engineering
+                </a>
+                <a
+                  href="/case-study/case2"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Automotive Engineering
+                </a>
+                <a
+                  href="/case-study/case3"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Aerospace & Defence
+                </a>
+                <a
+                  href="/case-study/case4"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Industrial Automation
+                </a>
+                <a
+                  href="/case-study/case5"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Healthcare Technology
+                </a>
+                <a
+                  href="/case-study/case6"
+                  className="block py-2 hover:text-red-500"
+                >
+                  IoT & Embedded Systems
+                </a>
               </div>
             </div>
 
@@ -276,11 +327,33 @@ const router = useRouter();
                   }
                 `}
               >
-                <a href="/talent-intelligence" className="block py-2 hover:text-red-500">Talent Intelligence</a>
-                <a href="/talent-acquisition" className="block py-2 hover:text-red-500">Talent Acquisition</a>
-                <a href="/global-peo-service" className="block py-2 hover:text-red-500">Global PEO Service</a>
-                <a href="/rpo" className="block py-2 hover:text-red-500">Recruitment Process Outsourcing</a>
-                <a href="/executive-search" className="block py-2 hover:text-red-500">Executive Search</a>
+                <a
+                  href="/talent-intelligence"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Talent Intelligence
+                </a>
+                <a
+                  href="/talent-acquisition"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Talent Acquisition
+                </a>
+                <a
+                  href="/global-peo-service"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Global PEO Service
+                </a>
+                <a href="/rpo" className="block py-2 hover:text-red-500">
+                  Recruitment Process Outsourcing
+                </a>
+                <a
+                  href="/executive-search"
+                  className="block py-2 hover:text-red-500"
+                >
+                  Executive Search
+                </a>
               </div>
             </div>
 
@@ -303,10 +376,18 @@ const router = useRouter();
                   }
                 `}
               >
-                <a href="/about" className="block py-2 hover:text-red-500">About Us</a>
-                <a href="/careers" className="block py-2 hover:text-red-500">Careers</a>
-                <a href="/blog" className="block py-2 hover:text-red-500">Blog</a>
-                <a href="/contact-us" className="block py-2 hover:text-red-500">Contact</a>
+                <a href="/about" className="block py-2 hover:text-red-500">
+                  About Us
+                </a>
+                <a href="/careers" className="block py-2 hover:text-red-500">
+                  Careers
+                </a>
+                <a href="/blog" className="block py-2 hover:text-red-500">
+                  Blog
+                </a>
+                <a href="/contact-us" className="block py-2 hover:text-red-500">
+                  Contact
+                </a>
               </div>
             </div>
           </div>
@@ -322,119 +403,230 @@ const router = useRouter();
 
         {/* MOBILE MENU */}
         {/* MOBILE MENU */}
-<div
-  className={`md:hidden bg-white overflow-hidden transition-all duration-500
+        <div
+          className={`md:hidden bg-white overflow-hidden transition-all duration-300
     ${menuOpen ? "max-h-[900px] py-6" : "max-h-0 py-0"}
   `}
->
-  <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d] text-sm">
-    <a href="/#whyus" onClick={handleMobileNavigate} className="hover:text-red-500">
-      Why Us
-    </a>
+        >
+          <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d] text-sm">
+            <a
+              href="/#whyus"
+              onClick={handleMobileNavigate}
+              className="hover:text-red-500"
+            >
+              Why Us
+            </a>
 
-    {/* TECH MOBILE */}
-    <div>
-      <button
-        onClick={() =>
-          setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")
-        }
-        className="hover:text-red-500 flex items-center gap-1 w-full text-left"
-      >
-        Technology Expertise <Arrow isOpen={openMenu === "tech-mobile"} />
-      </button>
+            {/* TECH MOBILE */}
+            <div>
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")
+                }
+                className="hover:text-red-500 flex items-center gap-1 w-full text-left"
+              >
+                Technology Expertise{" "}
+                <Arrow isOpen={openMenu === "tech-mobile"} />
+              </button>
 
-      <div
-        className={`overflow-hidden transition-all duration-300 pl-4
+              <div
+                className={`overflow-hidden transition-all duration-300 pl-4
           ${openMenu === "tech-mobile" ? "max-h-80 mt-2" : "max-h-0"}
         `}
-      >
-        <a href="/data/data-modernization" className="block py-2" onClick={handleMobileNavigate}>
-          Data Modernization
-        </a>
-        <a href="/data/aritifical-intelligence" className="block py-2" onClick={handleMobileNavigate}>
-          Artificial Intelligence
-        </a>
-        <a href="/data/ai-powered-operations" className="block py-2" onClick={handleMobileNavigate}>
-          AI Powered Operations
-        </a>
-      </div>
-    </div>
+              >
+                <a
+                  href="/data/data-modernization"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Data Modernization
+                </a>
+                <a
+                  href="/data/aritifical-intelligence"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Artificial Intelligence
+                </a>
+                <a
+                  href="/data/ai-powered-operations"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  AI Powered Operations
+                </a>
+              </div>
+            </div>
 
-    {/* DOMAIN MOBILE */}
-    <div>
-      <button
-        onClick={() =>
-          setOpenMenu(openMenu === "domain-mobile" ? null : "domain-mobile")
-        }
-        className="hover:text-red-500 flex items-center gap-1 w-full text-left"
-      >
-        Domain <Arrow isOpen={openMenu === "domain-mobile"} />
-      </button>
+            {/* DOMAIN MOBILE */}
+            <div>
+              <button
+                onClick={() =>
+                  setOpenMenu(
+                    openMenu === "domain-mobile" ? null : "domain-mobile",
+                  )
+                }
+                className="hover:text-red-500 flex items-center gap-1 w-full text-left"
+              >
+                Domain <Arrow isOpen={openMenu === "domain-mobile"} />
+              </button>
 
-      <div
-        className={`overflow-hidden transition-all duration-300 pl-4
+              <div
+                className={`overflow-hidden transition-all duration-300 pl-4
           ${openMenu === "domain-mobile" ? "max-h-96 mt-2" : "max-h-0"}
         `}
-      >
-        <a href="/case-study/case1" className="block py-2" onClick={handleMobileNavigate}>IT Services</a>
-        <a href="/case-study/case2" className="block py-2" onClick={handleMobileNavigate}>Automotive Engineering</a>
-        <a href="/case-study/case3" className="block py-2" onClick={handleMobileNavigate}>Aerospace & Defence</a>
-        <a href="/case-study/case4" className="block py-2" onClick={handleMobileNavigate}>Industrial Automation</a>
-        <a href="/case-study/case5" className="block py-2" onClick={handleMobileNavigate}>Healthcare Technology</a>
-        <a href="/case-study/case6" className="block py-2" onClick={handleMobileNavigate}>IoT & Embedded Systems</a>
-      </div>
-    </div>
+              >
+                <a
+                  href="/case-study/case1"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  IT Services
+                </a>
+                <a
+                  href="/case-study/case2"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Automotive Engineering
+                </a>
+                <a
+                  href="/case-study/case3"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Aerospace & Defence
+                </a>
+                <a
+                  href="/case-study/case4"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Industrial Automation
+                </a>
+                <a
+                  href="/case-study/case5"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Healthcare Technology
+                </a>
+                <a
+                  href="/case-study/case6"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  IoT & Embedded Systems
+                </a>
+              </div>
+            </div>
 
-    {/* SERVICES MOBILE */}
-    <div>
-      <button
-        onClick={() =>
-          setOpenMenu(openMenu === "services-mobile" ? null : "services-mobile")
-        }
-        className="hover:text-red-500 flex items-center gap-1 w-full text-left"
-      >
-        Services <Arrow isOpen={openMenu === "services-mobile"} />
-      </button>
+            {/* SERVICES MOBILE */}
+            <div>
+              <button
+                onClick={() =>
+                  setOpenMenu(
+                    openMenu === "services-mobile" ? null : "services-mobile",
+                  )
+                }
+                className="hover:text-red-500 flex items-center gap-1 w-full text-left"
+              >
+                Services <Arrow isOpen={openMenu === "services-mobile"} />
+              </button>
 
-      <div
-        className={`overflow-hidden transition-all duration-300 pl-4
+              <div
+                className={`overflow-hidden transition-all duration-300 pl-4
           ${openMenu === "services-mobile" ? "max-h-96 mt-2" : "max-h-0"}
         `}
-      >
-        <a href="/talent-intelligence" className="block py-2" onClick={handleMobileNavigate}>Talent Intelligence</a>
-        <a href="/talent-acquisition" className="block py-2" onClick={handleMobileNavigate}>Talent Acquisition</a>
-        <a href="/global-peo-service" className="block py-2" onClick={handleMobileNavigate}>Global PEO Service</a>
-        <a href="/rpo" className="block py-2" onClick={handleMobileNavigate}>Recruitment Process Outsourcing</a>
-        <a href="/executive-search" className="block py-2" onClick={handleMobileNavigate}>Executive Search</a>
-      </div>
-    </div>
+              >
+                <a
+                  href="/talent-intelligence"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Talent Intelligence
+                </a>
+                <a
+                  href="/talent-acquisition"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Talent Acquisition
+                </a>
+                <a
+                  href="/global-peo-service"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Global PEO Service
+                </a>
+                <a
+                  href="/rpo"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Recruitment Process Outsourcing
+                </a>
+                <a
+                  href="/executive-search"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Executive Search
+                </a>
+              </div>
+            </div>
 
-    {/* COMPANY MOBILE */}
-    <div>
-      <button
-        onClick={() =>
-          setOpenMenu(openMenu === "company-mobile" ? null : "company-mobile")
-        }
-        className="hover:text-red-500 flex items-center gap-1 w-full text-left"
-      >
-        Company <Arrow isOpen={openMenu === "company-mobile"} />
-      </button>
+            {/* COMPANY MOBILE */}
+            <div>
+              <button
+                onClick={() =>
+                  setOpenMenu(
+                    openMenu === "company-mobile" ? null : "company-mobile",
+                  )
+                }
+                className="hover:text-red-500 flex items-center gap-1 w-full text-left"
+              >
+                Company <Arrow isOpen={openMenu === "company-mobile"} />
+              </button>
 
-      <div
-        className={`overflow-hidden transition-all duration-300 pl-4
+              <div
+                className={`overflow-hidden transition-all duration-300 pl-4
           ${openMenu === "company-mobile" ? "max-h-60 mt-2" : "max-h-0"}
         `}
-      >
-        <a href="/about" className="block py-2" onClick={handleMobileNavigate}>About Us</a>
-        <a href="/careers" className="block py-2" onClick={handleMobileNavigate}>Careers</a>
-        <a href="/blog" className="block py-2" onClick={handleMobileNavigate}>Blog</a>
-        <a href="/contact-us" className="block py-2" onClick={handleMobileNavigate}>Contact</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
+              >
+                <a
+                  href="/about"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  About Us
+                </a>
+                <a
+                  href="/careers"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Careers
+                </a>
+                <a
+                  href="/blog"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Blog
+                </a>
+                <a
+                  href="/contact-us"
+                  className="block py-2"
+                  onClick={handleMobileNavigate}
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
   );

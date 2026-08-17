@@ -5,7 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
-import SlideUp from "@/components/SlideUp"; // ADDED
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
   // 1) PAGE DATA
@@ -23,8 +23,16 @@ export default function Page() {
 
   // 2) TABS
   const tabs = [
-    { id: "fulltime", label: "Role Mapping", icon: "/icon/shield.svg" },
-    { id: "flexi", label: "Talent Advisory", icon: "/icon/laptop.svg" },
+    {
+      id: "fulltime",
+      label: "Role Mapping",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "flexi",
+      label: "Talent Advisory",
+      icon: "/icon/laptop.svg",
+    },
     {
       id: "strategic",
       label: "Compensation Benchmarking Services",
@@ -43,12 +51,14 @@ export default function Page() {
       text:
         "Keptel defines competitive talent landscapes by proactively identifying and profiling potential candidates across targeted markets. Through exhaustive role mapping, we analyse technical expertise, behavioural competencies, industry exposure, and organisational alignment. This enables businesses to understand market availability, talent readiness, and the most strategic sourcing pathways—leading to informed hiring decisions and structured workforce planning.",
     },
+
     flexi: {
       title: "Talent Advisory",
       image: "/intelligence/a2.webp",
       text:
         "Our Talent Advisory solutions bring timely, intelligence-led insights to optimise recruitment efficiency and cost. As specialists, we deliver market trends, skill insights, and evaluations of rare and niche talent pools, enabling clients to accelerate hiring decisions. Our experts collaborate with client hiring managers to share data on experience, expertise, knowledge depth, and behavioural traits—ensuring hires are aligned to evolving industry standards. The advisory framework also strengthens diversity hiring and supports organisations in meeting their inclusivity goals.",
     },
+
     strategic: {
       title: "Compensation Benchmarking Services",
       image: "/intelligence/a3.png",
@@ -63,36 +73,60 @@ export default function Page() {
 
   return (
     <div>
-      {/* Hero */}
+      {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* Intro Section */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-        
-        {/* LEFT TEXT */}
-        <div>
-          <SlideUp>
-            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
-              {introLeft}
-            </p>
-          </SlideUp>
+      {/* OVERVIEW SECTION */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <SlideUp>
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Overview
+          </p>
+        </SlideUp>
 
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          {/* LEFT COLUMN */}
           <SlideUp>
-            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+            <h2 className="text-2xl md:text-3xl font-light leading-snug text-gray-800">
+              {introLeft}
+            </h2>
+
+            <p className="mt-6 text-gray-600 font-light text-left text-[13px] md:text-sm leading-[1.7]">
               {bottomText}
             </p>
           </SlideUp>
-        </div>
 
-        {/* RIGHT PARAGRAPH */}
+          {/* RIGHT COLUMN */}
+          <SlideUp>
+            <div className="border-l-4 border-red-600 pl-5 md:pl-6">
+              <p className="text-gray-700 font-light text-left text-[13px] md:text-sm leading-[1.7]">
+                {introRight}
+              </p>
+            </div>
+          </SlideUp>
+        </div>
+      </div>
+
+      {/* SERVICES HEADING */}
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
         <SlideUp>
-          <p className="text-gray-700 font-light leading-relaxed text-left text-justify whitespace-pre-line">
-            {introRight}
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+            Our Services
           </p>
+        </SlideUp>
+
+        <SlideUp>
+          <h3 className="text-3xl font-light text-gray-800 leading-snug mt-3">
+            Services
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-3"></div>
         </SlideUp>
       </div>
 
-      {/* Tabs */}
+      {/* TABS */}
       <ServiceTabs
         tabs={tabs}
         onSelect={(id: string) =>
@@ -100,7 +134,7 @@ export default function Page() {
         }
       />
 
-      {/* Active Section */}
+      {/* SERVICE CONTENT */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}
@@ -108,20 +142,33 @@ export default function Page() {
         text={sections[currentTab].text}
       />
 
-      {/* Final Diagram */}
-      <div className="py-16 text-center">
-        <SlideUp>
-          <h2 className="text-3xl font-extralight">
-            Talent Intelligence Process Flow
-          </h2>
-        </SlideUp>
+      {/* PROCESS SECTION */}
+      <div className="py-20" style={{ backgroundColor: "#e6edf4" }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <SlideUp>
+            <p className="text-red-600 font-semibold text-sm uppercase tracking-wide">
+              Process
+            </p>
+          </SlideUp>
 
-        <SlideUp>
-          <img
-            src="/intelligence/a4.webp"
-            className="w-[980px] mx-auto mt-4"
-          />
-        </SlideUp>
+          <SlideUp>
+            <h3 className="text-3xl font-light leading-snug text-gray-800 mt-3">
+              Talent Intelligence Process Flow
+            </h3>
+          </SlideUp>
+
+          <SlideUp>
+            <div className="w-16 h-1 bg-red-600 mt-4"></div>
+          </SlideUp>
+
+          <SlideUp>
+            <img
+              src="/intelligence/a4.webp"
+              className="w-full mt-8"
+              alt="Talent Intelligence Process Flow"
+            />
+          </SlideUp>
+        </div>
       </div>
 
       <Footer />
