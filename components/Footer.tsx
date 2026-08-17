@@ -3,11 +3,11 @@ import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaEn
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0b2744] text-gray-200 pt-16 pb-8 px-6 text-sm">
+    <footer className="bg-[#0b2744] text-gray-200 pt-8 pb-4 px-6 text-sm">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Border Rule */}
-        <hr className="border-gray-700/80 mb-16" />
+        <hr className="border-gray-700/80 mb-8" />
 
         {/* Footer 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Office Location / Contact Info */}
-          <div className="lg:col-span-6 lg:border-l lg:border-gray-700/80 lg:pl-12 space-y-8">
+          <div className="lg:col-span-6 lg:border-l lg:border-gray-700/80 lg:pl-12 space-y-4">
             {/* Address Row */}
             <div className="flex items-start space-x-4">
               <div className="w-10 h-10 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center mt-1">
@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
 
             {/* Email Row */}
-            <div className="flex items-center space-x-4 pt-4 border-t border-gray-700/50">
+            <div className="flex items-center space-x-4 pt-3 border-t border-gray-700/50">
               <div className="w-10 h-10 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center">
                 <FaEnvelope className="text-gray-300 text-sm" />
               </div>
@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
 
             {/* Phone Row */}
-            <div className="flex items-center space-x-4 pt-4 border-t border-gray-700/50">
+            <div className="flex items-center space-x-4 pt-3 border-t border-gray-700/50">
               <div className="w-10 h-10 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center">
                 <FaPhoneAlt className="text-gray-300 text-sm" />
               </div>
@@ -80,18 +80,18 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer placed below the main rows, aligned to the left */}
-        <div className="mt-16 mb-8 text-left">
+        <div className="mt-8 mb-4 text-left">
           <p className="max-w-3xl text-sm md:text-base text-gray-300 leading-relaxed">
             <span className="font-semibold text-white">Disclaimer:</span> Keptel does not charge any money from job seekers. Report suspicious activities to info@kepteltech.com.
           </p>
         </div>
 
         {/* Bottom Border Rule */}
-        <hr className="border-gray-700/80 mb-6" />
+        <hr className="border-gray-700/80 mb-4" />
 
         {/* Copyright */}
         <div className="flex justify-center items-center text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} Keptel Analytics Space. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Keptel Analytical Space. All Rights Reserved.</p>
         </div>
 
       </div>

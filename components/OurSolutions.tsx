@@ -40,7 +40,7 @@ export default function OurSolutions() {
 
             <SlideUp>
               <ExlTallCard
-                title="Artifical Intelligence"
+                title="Artificial Intelligence"
                 desc="Deploy machine learning, generative AI, and  automation to accelerate decisions and elevate business performance."
                 image="aia.jpg"
                 href="/data/aritifical-intelligence"

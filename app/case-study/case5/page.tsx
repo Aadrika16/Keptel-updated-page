@@ -30,16 +30,12 @@ export default function CaseStudyPage() {
           className="w-full h-full object-cover brightness-75"
         />
 
-        <div className="absolute inset-0 flex items-end md:items-center justify-center pb-16 md:pb-0">
-          <h1
-            className="text-[#e5170f] text-3xl md:text-5xl font-medium tracking-wide text-center"
-            style={{
-              WebkitTextStroke: "2px black",
-              WebkitTextFillColor: "#ffffffff",
-            }}
-          >
-            {title}
-          </h1>
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <SlideUp>
+            <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-center drop-shadow-lg">
+              {title}
+            </h1>
+          </SlideUp>
         </div>
       </div>
 
@@ -70,22 +66,24 @@ export default function CaseStudyPage() {
             {/* Right: Problem Statement Card */}
             <div className="lg:col-span-6">
               <SlideUp>
-                <div className="p-6 md:p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl text-white">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-500 shrink-0">
-                      <AlertTriangle className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-medium text-red-500 mb-2">
-                        Problem Statement
-                      </h2>
-                      <p className="text-gray-300 text-xs md:text-sm leading-relaxed font-light">
-                        The healthcare company needed specialists in clinical data
-                        engineering, patient-data interoperability, analytics pipelines,
-                        and regulatory-compliant architectures. Recruiting engineers
-                        with deep knowledge of healthcare data standards and secure data
-                        integration frameworks proved difficult.
-                      </p>
+                <div className="p-6 md:p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl text-white relative overflow-hidden">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-500 shrink-0">
+                        <AlertTriangle className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h2 className="text-lg font-medium text-red-500 mb-2">
+                          Problem Statement
+                        </h2>
+                        <p className="text-gray-300 text-xs md:text-sm leading-relaxed font-light">
+                          The healthcare company needed specialists in clinical data
+                          engineering, patient-data interoperability, analytics pipelines,
+                          and regulatory-compliant architectures. Recruiting engineers
+                          with deep knowledge of healthcare data standards and secure data
+                          integration frameworks proved difficult.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,19 +126,21 @@ export default function CaseStudyPage() {
           {/* Business Outcomes */}
           <SlideUp>
             <div className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm">
-              <div className="flex items-start gap-5 mb-6">
-                <div className="p-3.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 shrink-0 flex items-center justify-center w-14 h-14">
-                  <Target className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-medium text-slate-900 mb-2">
-                    Business Outcomes
-                  </h3>
-                  <p className="text-slate-600 text-xs md:text-sm font-light leading-relaxed">
-                    The engagement improved data quality, enhanced regulatory
-                    alignment, enabled faster analytics turnaround, and strengthened
-                    patient-data interoperability across clinical workflows.
-                  </p>
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
+                <div className="flex items-start gap-5 max-w-3xl">
+                  <div className="p-3.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100 shrink-0 flex items-center justify-center w-14 h-14">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg md:text-xl font-medium text-slate-900 mb-2">
+                      Business Outcomes
+                    </h3>
+                    <p className="text-slate-600 text-xs md:text-sm font-light leading-relaxed">
+                      The engagement improved data quality, enhanced regulatory
+                      alignment, enabled faster analytics turnaround, and strengthened
+                      patient-data interoperability across clinical workflows.
+                    </p>
+                  </div>
                 </div>
               </div>
 

@@ -32,7 +32,7 @@ export default function SlideUp({ children, className = "" }: SlideUpProps) {
     <div
       ref={ref}
       className={`
-        transition-all duration-7000 ease-out
+        transition-all duration-2000 ease-out
         ${visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
         ${className}
       `}

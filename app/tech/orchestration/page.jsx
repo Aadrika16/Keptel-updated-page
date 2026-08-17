@@ -1,49 +1,94 @@
 "use client";
 
 import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp";
+import { Server, CheckCircle2, HardDrive, Shield } from "lucide-react";
 
 export default function Infrastructure() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-[#E7EEF3]">
+      
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative w-full bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white pt-36 pb-24 px-6 overflow-hidden">
+        {/* Background decorative glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      {/* MAIN SECTION */}
-      <div className="min-h-screen bg-[#E7EEF3] text-black pt-24 pb-32">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <SlideUp>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium tracking-wide uppercase mb-6">
+              <Server className="w-4 h-4" /> Enterprise Infrastructure
+            </div>
 
-          {/* Title */}
-          <h1 className="text-4xl font-extralight mb-6">Infrastructure</h1>
+            <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-6 leading-tight">
+              Scalable <span className="text-red-500 font-normal">Infrastructure</span>
+            </h1>
 
-          {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl font-light">
-            Keptel engineers secure, scalable enterprise infrastructure using 
-            industry-leading Linux platforms and hybrid cloud environments. Our 
-            infrastructure services ensure reliability, performance, and compliance.
-          </p>
-
-          {/* Feature Block — What We Do */}
-          <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
-
-            <ul className="text-sm text-gray-700 space-y-2 font-light">
-              <li>• Linux server provisioning & configuration</li>
-              <li>• Infrastructure automation (IaC)</li>
-              <li>• Enterprise-grade security & OS-hardening</li>
-              <li>• Hybrid cloud infrastructure setup</li>
-              <li>• Monitoring, observability & log management</li>
-            </ul>
-          </div>
-
-          {/* Feature Block — Technologies */}
-          <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
-
-            <p className="text-sm text-gray-700 leading-relaxed font-light">
-              RedHat, SUSE, Ubuntu, VMware, Hyper-V, Terraform, Ansible, CI/CD Tooling.
+            <p className="text-gray-300 text-base md:text-xl font-light leading-relaxed max-w-3xl">
+              Keptel engineers secure, scalable enterprise infrastructure using 
+              industry-leading Linux platforms and hybrid cloud environments. Our 
+              infrastructure services ensure reliability, performance, and compliance.
             </p>
-          </div>
-
+          </SlideUp>
         </div>
       </div>
+
+      {/* ================= MAIN CONTENT SECTION ================= */}
+      <main className="flex-grow w-full max-w-5xl mx-auto px-6 py-16 -mt-10 relative z-20 space-y-8">
+
+        {/* What We Do Card */}
+        <SlideUp>
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3.5 rounded-2xl bg-red-50 text-red-600 border border-red-100 flex items-center justify-center shrink-0">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h2 className="text-2xl font-light text-slate-900 tracking-tight">What We Do</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Linux server provisioning & configuration",
+                "Infrastructure automation (IaC)",
+                "Enterprise-grade security & OS-hardening",
+                "Hybrid cloud infrastructure setup",
+                "Monitoring, observability & log management"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/70 border border-slate-100">
+                  <CheckCircle2 className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+                  <span className="text-sm font-light text-slate-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SlideUp>
+
+        {/* Technologies Card */}
+        <SlideUp>
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3.5 rounded-2xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center shrink-0">
+                <HardDrive className="w-6 h-6" />
+              </div>
+              <h2 className="text-2xl font-light text-slate-900 tracking-tight">Technologies & Platforms</h2>
+            </div>
+
+            <div className="flex flex-wrap gap-2.5">
+              {[
+                "RedHat", "SUSE", "Ubuntu", "VMware", "Hyper-V", 
+                "Terraform", "Ansible", "CI/CD Tooling"
+              ].map((tech, index) => (
+                <span 
+                  key={index} 
+                  className="px-4 py-2 rounded-xl bg-slate-100/80 border border-slate-200/60 text-xs md:text-sm font-light text-slate-700 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-colors"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </SlideUp>
+
+      </main>
 
       <Footer />
     </div>

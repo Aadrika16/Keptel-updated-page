@@ -30,16 +30,12 @@ export default function CaseStudyPage() {
           className="w-full h-full object-cover brightness-75"
         />
 
-        <div className="absolute inset-0 flex items-end md:items-center justify-center pb-16 md:pb-0">
-          <h1
-            className="text-[#e5170f] text-3xl md:text-5xl font-medium tracking-wide text-center"
-            style={{
-              WebkitTextStroke: "2px black",
-              WebkitTextFillColor: "#ffffffff",
-            }}
-          >
-            {title}
-          </h1>
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <SlideUp>
+            <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-center drop-shadow-lg">
+              {title}
+            </h1>
+          </SlideUp>
         </div>
       </div>
 

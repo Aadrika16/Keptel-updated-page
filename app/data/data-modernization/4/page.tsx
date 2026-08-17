@@ -4,11 +4,10 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import SideBySideCard from "@/components/SideBySideCard";
 import SlideUp from "@/components/SlideUp";
-import { Headphones, Monitor, Database, ShieldCheck } from "lucide-react";
 
 export default function Page() {
   const title = "Managed Services & Data Operations";
-  const bg = "/pic/Managed services and data operations1.png";
+  const bg = "/pic/Managed services and data operations.png";
 
   const introHeading =
     "Ensure stability, scalability, and continuous intelligence across your data ecosystem";
@@ -23,132 +22,56 @@ export default function Page() {
     "Keptel's managed services integrate real-time monitoring, automated incident handling, workload optimisation, and predictive analytics. This ensures your pipelines stay reliable, cost-efficient, and aligned with fast-evolving business requirements. You gain a resilient and future-ready operational environment.";
 
   return (
-    <div className="pt-13">
+    <div className="w-full bg-white text-gray-900 selection:bg-red-500 selection:text-white font-light">
+      
       {/* -------------------------------------------------- */}
       {/* HERO SECTION */}
       {/* -------------------------------------------------- */}
-      <div className="relative h-[520px] w-full overflow-hidden bg-white">
-        {/* Background Image / Right Side Graphic Container */}
-        <div className="absolute inset-0 flex justify-end">
-          <div className="relative w-full lg:w-[65%] h-full">
-            <Image 
-              src={bg} 
-              alt={title} 
-              fill 
-              className="object-cover [clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]" 
-              priority
-            />
-            {/* Subtle overlay to enhance contrast */}
-            <div className="absolute inset-0 bg-black/10 [clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(10%_0,100%_0,100%_100%,0_100%)]" />
-          </div>
-        </div>
+      <div className="relative h-[550px] w-full overflow-hidden bg-black">
+        <Image src={bg} alt={title} fill className="object-cover opacity-50" priority />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
 
-        {/* Left Side Content & Circular Nodes Layout matching reference */}
-        <div className="relative max-w-7xl mx-auto h-full flex items-center px-6 md:px-12 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 w-full items-center">
-            
-            {/* Text Content */}
-            <div className="lg:col-span-6 z-20">
-              <SlideUp>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-extralight text-[#0e355d] tracking-tight leading-tight">
-                    Managed Services<br />
-                    <span className="text-red-600 font-normal">& Data Operations</span>
-                  </h1>
-                  <div className="w-20 h-1 bg-red-600 mt-4 mb-6"></div>
-                  <p className="text-gray-600 text-lg md:text-xl font-light max-w-md leading-relaxed">
-                    Maintain continuous operational intelligence with zero disruption.
-                  </p>
-                </div>
-              </SlideUp>
+        <div className="absolute inset-0 flex items-center max-w-7xl mx-auto px-6 md:px-12 relative z-10 pt-24 md:pt-32">
+          <SlideUp>
+            <div className="max-w-xl space-y-4">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium tracking-widest uppercase">
+                Managed Services
+              </span>
+              <h1 className="text-4xl md:text-6xl font-extralight text-white tracking-tight leading-[1.1]">
+                Managed Services <br />
+                <span className="text-red-500 font-normal">& Data Operations</span>
+              </h1>
+              <div className="w-20 h-1 bg-red-600 rounded-full"></div>
+              <p className="text-slate-200 text-lg md:text-xl font-light leading-relaxed">
+                Maintain continuous operational intelligence with zero disruption.
+              </p>
             </div>
-
-            {/* Circular Orbit & Floating Label Cards (Desktop Only) */}
-            <div className="hidden lg:block lg:col-span-6 relative h-full min-h-[400px]">
-              {/* SVG Circular Path with Indicator Dots */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 450" fill="none">
-                <circle 
-                  cx="200" 
-                  cy="225" 
-                  r="150" 
-                  stroke="#ef4444" 
-                  strokeWidth="2" 
-                  strokeDasharray="5 5" 
-                  opacity="0.5"
-                />
-              </svg>
-
-              {/* Node 1: Expert Support (Top) */}
-              <div className="absolute top-[12%] left-[50%] -translate-x-1/2 bg-white px-4 py-2.5 rounded-full shadow-lg border border-red-100 flex items-center gap-3 text-gray-800">
-                <div className="text-red-600 bg-red-50 p-2 rounded-full">
-                  <Headphones size={20} />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-semibold text-gray-900 leading-tight">Expert</p>
-                  <p className="text-xs text-gray-500">Support</p>
-                </div>
-              </div>
-
-              {/* Node 2: Real-time Monitoring (Left) */}
-              <div className="absolute top-[48%] left-[2%] -translate-y-1/2 bg-white px-4 py-2.5 rounded-full shadow-lg border border-red-100 flex items-center gap-3 text-gray-800">
-                <div className="text-red-600 bg-red-50 p-2 rounded-full">
-                  <Monitor size={20} />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-semibold text-gray-900 leading-tight">Real-time</p>
-                  <p className="text-xs text-gray-500">Monitoring</p>
-                </div>
-              </div>
-
-              {/* Node 3: Data Management (Right) */}
-              <div className="absolute top-[48%] right-[5%] -translate-y-1/2 bg-white px-4 py-2.5 rounded-full shadow-lg border border-red-100 flex items-center gap-3 text-gray-800">
-                <div className="text-red-600 bg-red-50 p-2 rounded-full">
-                  <Database size={20} />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-semibold text-gray-900 leading-tight">Data</p>
-                  <p className="text-xs text-gray-500">Management</p>
-                </div>
-              </div>
-
-              {/* Node 4: Secure & Reliable (Bottom) */}
-              <div className="absolute bottom-[10%] left-[50%] -translate-x-1/2 bg-white px-4 py-2.5 rounded-full shadow-lg border border-red-100 flex items-center gap-3 text-gray-800">
-                <div className="text-red-600 bg-red-50 p-2 rounded-full">
-                  <ShieldCheck size={20} />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-semibold text-gray-900 leading-tight">Secure &</p>
-                  <p className="text-xs text-gray-500">Reliable</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          </SlideUp>
         </div>
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* INTRO (Card style with wider layout and left image) */}
+      {/* INTRO SECTION */}
       {/* -------------------------------------------------- */}
-      <div className="max-w-[88rem] mx-auto px-6 py-20">
+      <div className="max-w-[88rem] mx-auto px-6 py-28">
         <SlideUp>
           <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 border-l-4 border-red-600 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center">
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl p-2 flex items-center justify-center">
+              <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                 <Image 
                   src="/pic/Managed services and data operations.png" 
                   alt="Managed services and data operations concept" 
                   fill 
-                  className="object-contain p-2"
+                  className="object-cover rounded-xl"
                 />
               </div>
             </div>
-            <div className="w-full md:w-8/12">
-              <div className="w-12 h-1 bg-red-600 mb-4"></div>
+            <div className="w-full md:w-8/12 space-y-6">
+              <div className="w-12 h-1 bg-red-600 rounded-full"></div>
               <h2 className="text-2xl md:text-3xl font-light text-red-600 leading-snug">
                 {introHeading}
               </h2>
-              <p className="mt-6 text-gray-700 leading-relaxed font-light text-left text-base">
+              <p className="mt-6 text-gray-700 leading-relaxed font-light text-base text-left">
                 {introPara}
               </p>
             </div>
@@ -157,28 +80,28 @@ export default function Page() {
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* MID BLOCK (Card style with wider layout and left image) */}
+      {/* MID BLOCK SECTION */}
       {/* -------------------------------------------------- */}
-      <div className="py-20" style={{ backgroundColor: "#e6edf4" }}>
+      <div className="py-28" style={{ backgroundColor: "#e6edf4" }}>
         <div className="max-w-[88rem] mx-auto px-6">
           <SlideUp>
             <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 border-l-4 border-red-600 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
               <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center order-1 md:order-1">
-                <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl p-2 flex items-center justify-center">
+                <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                   <Image 
                     src="/pic/Pipeline & workload monitoring.png" 
                     alt="Pipeline and workload monitoring concept" 
                     fill 
-                    className="object-contain p-2"
+                    className="object-cover rounded-xl"
                   />
                 </div>
               </div>
-              <div className="w-full md:w-8/12 order-2 md:order-2">
-                <div className="w-12 h-1 bg-blue-600 mb-4"></div>
-                <h3 className="text-2xl md:text-3xl font-light leading-snug text-blue-900">
+              <div className="w-full md:w-8/12 order-2 md:order-2 space-y-6">
+                <div className="w-12 h-1 bg-red-600 rounded-full"></div>
+                <h3 className="text-2xl md:text-3xl font-light leading-snug text-red-600">
                   {midTitle}
                 </h3>
-                <p className="mt-6 text-gray-700 leading-relaxed font-light text-left text-base">
+                <p className="mt-6 text-gray-700 leading-relaxed font-light text-base text-left">
                   {midPara}
                 </p>
               </div>
@@ -190,24 +113,24 @@ export default function Page() {
       {/* -------------------------------------------------- */}
       {/* WHAT WE DO TITLE */}
       {/* -------------------------------------------------- */}
-      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
+      <div className="max-w-[88rem] mx-auto px-6 pt-24 pb-12 bg-white">
         <SlideUp>
+          <span className="text-xs font-semibold tracking-widest text-red-600 uppercase bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200/60 inline-block mb-3">
+            Capabilities
+          </span>
           <h3 className="text-3xl font-light text-red-600 leading-snug whitespace-nowrap">
             What we do
           </h3>
-        </SlideUp>
-
-        <SlideUp>
           <div className="w-16 h-[3px] bg-red-500 mt-3"></div>
         </SlideUp>
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* CARD GRID */}
+      {/* CARD GRID (4 Cards in One Row) */}
       {/* -------------------------------------------------- */}
-      <div className="w-full pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-start auto-rows-fr">
+      <div className="w-full pb-28 bg-white">
+        <div className="max-w-[96rem] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-start auto-rows-fr">
             
             <div className="w-full h-full">
               <SideBySideCard
@@ -236,7 +159,7 @@ export default function Page() {
               />
             </div>
 
-            <div className="w-full h-full md:col-span-2 lg:col-span-1 lg:col-start-1">
+            <div className="w-full h-full">
               <SideBySideCard
                 title="Operational governance"
                 text="Enforce compliance, standards, access controls, and audit readiness across your entire data ecosystem."

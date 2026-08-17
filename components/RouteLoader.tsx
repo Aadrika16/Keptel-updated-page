@@ -27,6 +27,9 @@ export default function RouteLoader() {
         width={360}
         height={360}
         alt="Loading..."
+        priority
+        style={{ width: "auto", height: "auto" }}
+        className="w-36 h-auto"
       />
     </div>
   );
