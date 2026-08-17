@@ -91,15 +91,15 @@ export default function Page() {
               {introLeft}
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed font-light text-left md:text-justify text-sm">
+            <p className="mt-6 text-gray-600 font-light text-left text-[13px] md:text-sm leading-[1.7]">
               {bottomText}
             </p>
           </SlideUp>
 
           {/* RIGHT COLUMN */}
           <SlideUp>
-            <div className="border-l-4 border-red-600 pl-6">
-              <p className="text-gray-700 leading-relaxed font-light text-left md:text-justify text-sm">
+            <div className="border-l-4 border-red-600 pl-5 md:pl-6">
+              <p className="text-gray-700 font-light text-left text-[13px] md:text-sm leading-[1.7]">
                 {introRight}
               </p>
             </div>
