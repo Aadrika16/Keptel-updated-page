@@ -5,7 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
-import SlideUp from "@/components/SlideUp"; // ADDED
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
   // 1) PAGE DATA
@@ -23,8 +23,16 @@ export default function Page() {
 
   // 2) TABS
   const tabs = [
-    { id: "fulltime", label: "Role Mapping", icon: "/icon/shield.svg" },
-    { id: "flexi", label: "Talent Advisory", icon: "/icon/laptop.svg" },
+    {
+      id: "fulltime",
+      label: "Role Mapping",
+      icon: "/icon/shield.svg",
+    },
+    {
+      id: "flexi",
+      label: "Talent Advisory",
+      icon: "/icon/laptop.svg",
+    },
     {
       id: "strategic",
       label: "Compensation Benchmarking Services",
@@ -43,12 +51,14 @@ export default function Page() {
       text:
         "Keptel defines competitive talent landscapes by proactively identifying and profiling potential candidates across targeted markets. Through exhaustive role mapping, we analyse technical expertise, behavioural competencies, industry exposure, and organisational alignment. This enables businesses to understand market availability, talent readiness, and the most strategic sourcing pathways—leading to informed hiring decisions and structured workforce planning.",
     },
+
     flexi: {
       title: "Talent Advisory",
       image: "/intelligence/a2.webp",
       text:
         "Our Talent Advisory solutions bring timely, intelligence-led insights to optimise recruitment efficiency and cost. As specialists, we deliver market trends, skill insights, and evaluations of rare and niche talent pools, enabling clients to accelerate hiring decisions. Our experts collaborate with client hiring managers to share data on experience, expertise, knowledge depth, and behavioural traits—ensuring hires are aligned to evolving industry standards. The advisory framework also strengthens diversity hiring and supports organisations in meeting their inclusivity goals.",
     },
+
     strategic: {
       title: "Compensation Benchmarking Services",
       image: "/intelligence/a3.png",
@@ -63,7 +73,7 @@ export default function Page() {
 
   return (
     <div>
-      {/* Hero */}
+      {/* HERO */}
       <FullHero title={title} bg={bg} />
 
       {/* OVERVIEW SECTION */}
@@ -77,10 +87,11 @@ export default function Page() {
         <div className="grid md:grid-cols-2 gap-12 mt-8">
           {/* LEFT COLUMN */}
           <SlideUp>
-            <h2 className="text-3xl font-light leading-snug text-gray-800">
+            <h2 className="text-2xl md:text-3xl font-light leading-snug text-gray-800">
               {introLeft}
             </h2>
-            <p className="mt-6 text-gray-600 leading-relaxed font-light text-justify text-sm">
+
+            <p className="mt-6 text-gray-600 leading-relaxed font-light text-left md:text-justify text-sm">
               {bottomText}
             </p>
           </SlideUp>
@@ -88,7 +99,7 @@ export default function Page() {
           {/* RIGHT COLUMN */}
           <SlideUp>
             <div className="border-l-4 border-red-600 pl-6">
-              <p className="text-gray-700 leading-relaxed font-light text-justify text-sm">
+              <p className="text-gray-700 leading-relaxed font-light text-left md:text-justify text-sm">
                 {introRight}
               </p>
             </div>
