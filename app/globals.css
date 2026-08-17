@@ -187,17 +187,3 @@ section {
 .animate-slide-in {
   animation: slide-in 0.3s ease-out;
 }
-
-/* =========================================
-   TALENT INTELLIGENCE - RESPONSIVE TEXT
-   ========================================= */
-
-.talent-readable-text {
-  text-align: left !important;
-}
-
-@media (min-width: 768px) {
-  .talent-readable-text {
-    text-align: justify !important;
-  }
-}
