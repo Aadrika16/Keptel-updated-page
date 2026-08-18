@@ -59,7 +59,7 @@ export default function Page() {
             <div className="w-full md:w-5/12 flex-shrink-0 flex justify-center">
               <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                 <Image 
-                  src="/pic/Data platform modernization1.png" 
+                  src="/pic/ChatGPT Image Aug 17, 2026, 02_11_52 PM.png" 
                   alt="Data platform modernization concept" 
                   fill 
                   className="object-cover rounded-xl"
@@ -89,7 +89,7 @@ export default function Page() {
               <div className="w-full md:w-5/12 flex-shrink-0 flex justify-center order-1 md:order-1">
                 <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                   <Image 
-                    src="/pic/Cloud migration & automation.png" 
+                    src="/pic/ChatGPT Image Aug 17, 2026, 02_15_30 PM.png" 
                     alt="Cloud migration and automation concept" 
                     fill 
                     className="object-cover rounded-xl"

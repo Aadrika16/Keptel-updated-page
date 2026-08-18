@@ -57,7 +57,7 @@ export default function Page() {
             <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center">
               <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                 <Image 
-                  src="/pic/Data management.png" 
+                  src="/pic/data_ecosystem_image_separate.png" 
                   alt="Data management concept" 
                   fill 
                   className="object-cover rounded-xl"
@@ -87,7 +87,7 @@ export default function Page() {
               <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center order-1 md:order-1">
                 <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                   <Image 
-                    src="/pic/Automated governance1.png" 
+                    src="/pic/data_governance_image_separate.png" 
                     alt="Automated governance concept" 
                     fill 
                     className="object-cover rounded-xl"

@@ -59,7 +59,7 @@ export default function Page() {
             <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center">
               <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                 <Image 
-                  src="/pic/Generative AI solutions.png" 
+                  src="/pic/generative_ai_image_1.png" 
                   alt="Generative AI solutions concept" 
                   fill 
                   className="object-cover rounded-xl"
@@ -89,7 +89,7 @@ export default function Page() {
               <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center order-1 md:order-1">
                 <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                   <Image 
-                    src="/pic/RAG & enterprise search systems.png" 
+                    src="/pic/generative_ai_image_2.png"
                     alt="RAG and enterprise search systems concept" 
                     fill 
                     className="object-cover rounded-xl"

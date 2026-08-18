@@ -59,7 +59,7 @@ export default function Page() {
             <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center">
               <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                 <Image 
-                  src="/pic/Managed services and data operations.png" 
+                  src="/pic/ChatGPT Image Aug 17, 2026, 03_24_35 PM.png" 
                   alt="Managed services and data operations concept" 
                   fill 
                   className="object-cover rounded-xl"
@@ -89,7 +89,7 @@ export default function Page() {
               <div className="w-full md:w-4/12 flex-shrink-0 flex justify-center order-1 md:order-1">
                 <div className="relative w-full h-72 md:h-80 rounded-2xl overflow-hidden">
                   <Image 
-                    src="/pic/Pipeline & workload monitoring.png" 
+                    src="/pic/ChatGPT Image Aug 17, 2026, 05_17_42 PM.png" 
                     alt="Pipeline and workload monitoring concept" 
                     fill 
                     className="object-cover rounded-xl"
